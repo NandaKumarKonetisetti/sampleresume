@@ -1,0 +1,158 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    overflow: hidden; /* Ensure children don't overflow during animation */
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* Ensure children don't overflow during animation */
+}
+
+.profile-picture {
+    flex: 1;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: imageFadeIn 2s ease-in-out forwards;
+}
+
+.profile-info {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 2.5em;
+    animation: nameMove 2s ease-in-out forwards;
+}
+
+.profile-info p, .social-links a {
+    margin: 5px 0;
+    animation: textFadeIn 2s ease-in-out forwards;
+}
+
+.social-links a {
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: -50px;
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #4CAF50;
+    display: inline-block;
+    padding-bottom: 5px;
+    animation: headingSlideIn 2s ease-in-out forwards;
+}
+
+.job h3 {
+    margin: 0;
+    animation: headingSlideIn 2s ease-in-out forwards;
+}
+
+.skills {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills li {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animation Keyframes */
+@keyframes nameMove {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes imageFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes headingSlideIn {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
